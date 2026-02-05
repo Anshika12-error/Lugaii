@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Vaishnavi 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('9f5df68745e4c128351d29c66157f687.jpg') center/cover no-repeat fixed;
+      position: relative;
+      overflow: hidden;
+      transition: background 1s ease-in-out;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 0;
+      transition: background 1s ease-in-out;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.95);
+      padding: 40px 30px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 { color: #ff4d6d; margin-bottom: 10px; }
+    p { color: #555; margin-bottom: 20px; line-height: 1.6; }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover { background: #e63956; transform: scale(1.05); }
+
+    .popup {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+      z-index: 10;
+    }
+
+    .popup-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 300px;
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .hidden { display: none; }
+
+    .reasons {
+      text-align: left;
+      margin-top: 15px;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .reasons li { margin-bottom: 6px; color: #ff4d6d; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- POPUP FIRST -->
+  <div class="popup" id="popup">
+    <div class="popup-box">
+      <h2>Hey Vaishnaviii 💫</h2>
+      <p>I made something tiny for my lugaii 🥺</p>
+      <button onclick="openBirthday()">Open 💌</button>
+    </div>
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="card hidden" id="mainCard">
+    <h1>Happy Birthday 🎂</h1>
+    <p>
+      Another year of you being the most beautiful
+      chaos in my life… and honestly,
+      I wouldn’t want it any other way. 💗
+    </p>
+
+    <button onclick="showReasons()">21 Reasons I Love You ➜</button>
+
+   <ol class="reasons hidden" id="reasons">
+<li>Your amazing fashion sense 😌</li>
+<li>You are mature enough to understand me.</li>
+<li>You are always there for me.</li>
+<li>You stand by me even in my lowest moments.</li>
+<li>You understand my silence without words.</li>
+<li>You laugh at my silly jokes.</li>
+<li>You make ordinary days feel special.</li>
+<li>Your smile heals everything.</li>
+<li>You believe in me when I don’t believe in myself.</li>
+<li>You are my comfort person.</li>
+<li>You listen without judging.</li>
+<li>You celebrate my smallest wins.</li>
+<li>You give the warmest hugs.</li>
+<li>You are strong yet soft at the same time.</li>
+<li>You make life less scary.</li>
+<li>You are my daily dose of happiness.</li>
+<li>You inspire me to become better.</li>
+<li>You keep my secrets safe.</li>
+<li>You bring peace to my chaos.</li>
+<li>You feel like home to me.</li>
+<li>Because it’s YOU… and that’s enough forever. 💖</li>
+</ol>
+</div>
+
+
+  <script>
+    function openBirthday() {
+      document.getElementById('popup').classList.add('hidden');
+      document.getElementById('mainCard').classList.remove('hidden');
+
+      // CHANGE BACKGROUND WHEN BIRTHDAY OPENS
+      document.body.style.background = "url('2026-02-06 00.14.57.jpg') center/cover no-repeat fixed";
+    }
+
+    function showReasons() {
+      document.getElementById('reasons').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
