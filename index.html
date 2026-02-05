@@ -12,7 +12,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('9f5df68745e4c128351d29c66157f687.jpg') center/cover no-repeat fixed;
+      background: url('funny.jpg') center/cover no-repeat fixed;
       position: relative;
       overflow: hidden;
       transition: background 1s ease-in-out;
@@ -24,7 +24,6 @@
       inset: 0;
       background: rgba(0,0,0,0.35);
       z-index: 0;
-      transition: background 1s ease-in-out;
     }
 
     .card {
@@ -98,11 +97,16 @@
 </head>
 <body>
 
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- POPUP FIRST -->
   <div class="popup" id="popup">
     <div class="popup-box">
-      <h2>Hey Vaishnaviii 💫</h2>
-      <p>I made something tiny for my lugaii 🥺</p>
+      <h2>Hey Vaishnavi 💫</h2>
+      <p>I made something tiny… but full of love just for you 🥺</p>
       <button onclick="openBirthday()">Open 💌</button>
     </div>
   </div>
@@ -118,39 +122,42 @@
 
     <button onclick="showReasons()">21 Reasons I Love You ➜</button>
 
-   <ol class="reasons hidden" id="reasons">
-<li>Your amazing fashion sense 😌</li>
-<li>You are mature enough to understand me.</li>
-<li>You are always there for me.</li>
-<li>You stand by me even in my lowest moments.</li>
-<li>You understand my silence without words.</li>
-<li>You laugh at my silly jokes.</li>
-<li>You make ordinary days feel special.</li>
-<li>Your smile heals everything.</li>
-<li>You believe in me when I don’t believe in myself.</li>
-<li>You are my comfort person.</li>
-<li>You listen without judging.</li>
-<li>You celebrate my smallest wins.</li>
-<li>You give the warmest hugs.</li>
-<li>You are strong yet soft at the same time.</li>
-<li>You make life less scary.</li>
-<li>You are my daily dose of happiness.</li>
-<li>You inspire me to become better.</li>
-<li>You keep my secrets safe.</li>
-<li>You bring peace to my chaos.</li>
-<li>You feel like home to me.</li>
-<li>Because it’s YOU… and that’s enough forever. 💖</li>
-</ol>
-</div>
-
+    <ol class="reasons hidden" id="reasons">
+      <li>Your amazing fashion sense 😌</li>
+      <li>You are mature enough to understand me.</li>
+      <li>You are always there for me.</li>
+      <li>You stand by me even in my lowest moments.</li>
+      <li>You understand my silence without words.</li>
+      <li>You laugh at my silly jokes.</li>
+      <li>You make ordinary days feel special.</li>
+      <li>Your smile heals everything.</li>
+      <li>You believe in me when I don’t believe in myself.</li>
+      <li>You are my comfort person.</li>
+      <li>You listen without judging.</li>
+      <li>You celebrate my smallest wins.</li>
+      <li>You give the warmest hugs.</li>
+      <li>You are strong yet soft at the same time.</li>
+      <li>You make life less scary.</li>
+      <li>You are my daily dose of happiness.</li>
+      <li>You inspire me to become better.</li>
+      <li>You keep my secrets safe.</li>
+      <li>You bring peace to my chaos.</li>
+      <li>You feel like home to me.</li>
+      <li>Because it’s YOU… and that’s enough forever. 💖</li>
+    </ol>
+  </div>
 
   <script>
     function openBirthday() {
       document.getElementById('popup').classList.add('hidden');
       document.getElementById('mainCard').classList.remove('hidden');
 
-      // CHANGE BACKGROUND WHEN BIRTHDAY OPENS
-      document.body.style.background = "url('2026-02-06 00.14.57.jpg') center/cover no-repeat fixed";
+      // CHANGE BACKGROUND
+      document.body.style.background = "url('birthday.jpg') center/cover no-repeat fixed";
+
+      // PLAY MUSIC
+      const music = document.getElementById('bgMusic');
+      music.play();
     }
 
     function showReasons() {
@@ -160,3 +167,4 @@
 
 </body>
 </html>
+
